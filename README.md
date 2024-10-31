@@ -56,10 +56,6 @@ This project provides hands-on practice with:
 ## Middleware
 
 -   **authMiddleware**: Verifies JWT tokens to protect routes requiring authentication.
--   **Zod Schemas**: Used for request body validation:
-    -   `signupSchema` for validating new user signups.
-    -   `signinSchema` for validating login credentials.
-    -   `updateSchema` for updating user profiles.
 
 ## MongoDB Transactions
 
