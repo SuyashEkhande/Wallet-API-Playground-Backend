@@ -26,30 +26,30 @@ This project provides hands-on practice with:
 
 ### Authentication
 
--   **POST /auth/signup** - Register a new user
+-   **POST api/v1/user/signup** - Register a new user
     -   **Request Body**: `{ username: email, password: string, firstName: string, lastName: string }`
     -   **Response**: Returns a JWT token if successful.
--   **POST /auth/signin** - Log in and receive a JWT token
+-   **POST api/v1/user/signin** - Log in and receive a JWT token
     -   **Request Body**: `{ username: email, password: string }`
     -   **Response**: Returns a JWT token if credentials are valid.
 
 ### Account Management
 
--   **GET /account/balance** - View account balance (Protected by authMiddleware)
+-   **GET api/v1/account/balance** - View account balance (Protected by authMiddleware)
     -   **Response**: `{ balance: number }`
--   **PUT /account** - Update account information (Protected by authMiddleware)
+-   **PUT api/v1/user/** - Update account information (Protected by authMiddleware)
     -   **Request Body**: `{ password: string (optional), firstName: string (optional), lastName: string (optional) }`
     -   **Response**: `{ message: "Updated successfully" }`
 
 ### Balance Transfer
 
--   **POST /account/transfer** - Transfer funds to another user’s account (Protected by authMiddleware)
+-   **POST api/v1/account/transfer** - Transfer funds to another user’s account (Protected by authMiddleware)
     -   **Request Body**: `{ amount: number, to: userId }`
     -   **Response**: `{ message: "Transfer successful" }`
 
 ### Bulk User Retrieval
 
--   **GET /account/bulk** - Retrieve user details with optional filtering by name
+-   **GET api/v1/account/transfer** - Retrieve user details with optional filtering by name
     -   **Query Parameters**: `filter` (optional) - filters by first or last name using regex.
     -   **Response**: Array of users with `_id`, `username`, `firstName`, and `lastName`.
 
